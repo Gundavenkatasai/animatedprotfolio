@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunda Venkatasai - Full Stack Web Developer</title>
+    <meta name="description" content="Professional portfolio of Gunda Venkatasai - B.Tech CSE student at Lovely Professional University and Full Stack Web Developer specializing in AI-powered web applications">
+    <meta property="og:title" content="Gunda Venkatasai - Full Stack Web Developer">
+    <meta property="og:description" content="Crafting scalable, animated, user-centric web apps with modern technologies">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        
+        :root {
+            --navy: #0f1724;
+            --teal: #00d1bf;
+            --orange: #ff6a3d;
+            --violet: #6a3bff;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--teal) 0%, var(--orange) 50%, var(--violet) 100%);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(0, 209, 191, 0.3), 0 0 40px rgba(255, 106, 61, 0.2);
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: 2px solid var(--teal);
+            white-space: nowrap;
+            animation: typing 4s steps(50, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--teal) }
+        }
+        
+        .morphing-blob {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: morph 8s ease-in-out infinite;
+        }
+        
+        @keyframes morph {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
+            50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+            75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
+        }
+        
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: var(--teal);
+            border-radius: 50%;
+            animation: particle-float 12s infinite linear;
+        }
+        
+        @keyframes particle-float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+        
+        .skill-badge {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .skill-badge:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+        
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .project-card:hover {
+            transform: perspective(1000px) rotateX(5deg) rotateY(5deg) translateY(-15px);
+        }
+        
+        .timeline-item {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .pulse-dot {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.2); }
+        }
+        
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .radial-progress {
+            transform: rotate(-90deg);
+        }
+        
+        .progress-circle {
+            transition: stroke-dashoffset 2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .cert-carousel {
+            animation: scroll 20s linear infinite;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .cert-carousel:hover {
+            animation-play-state: paused;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white overflow-x-hidden">
+    <!-- Floating Particles -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="left: 20%; animation-delay: 3s;"></div>
+        <div class="particle" style="left: 30%; animation-delay: 6s;"></div>
+        <div class="particle" style="left: 40%; animation-delay: 9s;"></div>
+        <div class="particle" style="left: 50%; animation-delay: 2s;"></div>
+        <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+        <div class="particle" style="left: 70%; animation-delay: 8s;"></div>
+        <div class="particle" style="left: 80%; animation-delay: 1s;"></div>
+        <div class="particle" style="left: 90%; animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-card" role="navigation" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold gradient-bg bg-clip-text text-transparent">GV</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="hover:text-cyan-400 transition-colors focus:outline-none focus:text-cyan-400">Home</a>
+                    <a href="#about" class="hover:text-cyan-400 transition-colors focus:outline-none focus:text-cyan-400">About</a>
+                    <a href="#skills" class="hover:text-cyan-400 transition-colors focus:outline-none focus:text-cyan-400">Skills</a>
+                    <a href="#projects" class="hover:text-cyan-400 transition-colors focus:outline-none focus:text-cyan-400">Projects</a>
+                    <a href="#experience" class="hover:text-cyan-400 transition-colors focus:outline-none focus:text-cyan-400">Experience</a>
+                    <a href="#education" class="hover:text-cyan-400 transition-colors focus:outline-none focus:text-cyan-400">Education</a>
+                    <a href="#certifications" class="hover:text-cyan-400 transition-colors focus:outline-none focus:text-cyan-400">Certifications</a>
+                    <a href="#contact" class="hover:text-cyan-400 transition-colors focus:outline-none focus:text-cyan-400">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="morphing-blob absolute top-20 left-10 w-96 h-96 gradient-bg opacity-20"></div>
+            <div class="morphing-blob absolute bottom-20 right-10 w-80 h-80 gradient-bg opacity-15" style="animation-delay: -4s;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-8">
+                <div class="space-y-6">
+                    <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                        Hi, I'm <span class="gradient-bg bg-clip-text text-transparent">Gunda Venkatasai</span>
+                    </h1>
+                    <div class="text-xl md:text-2xl text-gray-300 typewriter">
+                        Full-Stack Web Developer
+                    </div>
+                    <p class="text-lg text-gray-400 max-w-lg leading-relaxed">
+                        Crafting scalable, animated, user-centric web apps. B.Tech CSE student at Lovely Professional University with expertise in AI-powered solutions.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="scrollToSection('projects')" class="px-8 py-4 gradient-bg rounded-2xl font-semibold hover:scale-105 hover:shadow-2xl transition-all neon-glow focus:outline-none focus:ring-2 focus:ring-cyan-400">
+                        View Projects
+                    </button>
+                    <button onclick="downloadResume()" class="px-8 py-4 glass-card rounded-2xl font-semibold hover:scale-105 transition-all border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+                        Download Résumé
+                    </button>
+                </div>
+                
+                <div class="flex space-x-6 pt-4">
+                    <a href="https://www.linkedin.com/in/gunda-venkatasai" target="_blank" rel="noopener noreferrer" class="text-2xl hover:text-cyan-400 transition-colors hover:scale-110 transform focus:outline-none focus:text-cyan-400" aria-label="LinkedIn Profile">
+                        💼
+                    </a>
+                    <a href="https://github.com/Gundavenkatasai" target="_blank" rel="noopener noreferrer" class="text-2xl hover:text-cyan-400 transition-colors hover:scale-110 transform focus:outline-none focus:text-cyan-400" aria-label="GitHub Profile">
+                        🐙
+                    </a>
+                    <button onclick="copyEmail()" class="text-2xl hover:text-cyan-400 transition-colors hover:scale-110 transform focus:outline-none focus:text-cyan-400" title="Copy email" aria-label="Copy email address">
+                        📧
+                    </button>
+                    <a href="tel:+919963039884" class="text-2xl hover:text-cyan-400 transition-colors hover:scale-110 transform focus:outline-none focus:text-cyan-400" aria-label="Phone number">
+                        📱
+                    </a>
+                </div>
+            </div>
+            
+            <div class="flex justify-center">
+                <div class="relative">
+                    <div class="w-80 h-80 gradient-bg rounded-full opacity-20 morphing-blob"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-64 h-64 glass-card rounded-full flex items-center justify-center">
+    <img src="sai.jpeg" alt="profile"
+    style="width:200px;height:200px;border-radius:50%;object-fit:cover;">
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="glass-card rounded-3xl p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 fade-up">
+                        <h2 class="text-4xl font-bold gradient-bg bg-clip-text text-transparent">About Me</h2>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            Highly motivated B.Tech CSE student at Lovely Professional University (CGPA: 7.0/10) with a strong foundation in full-stack web development, software engineering, and user-centric design.
+                        </p>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            I specialize in creating AI-powered web applications, combining modern frontend frameworks with robust backend systems. My passion lies in building scalable solutions that solve real-world problems.
+                        </p>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            Currently expanding my expertise through Oracle Generative AI certification and Google Arcade programs while contributing to innovative projects in web development and artificial intelligence.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-8 text-center">
+                        <div class="space-y-2 fade-up" style="animation-delay: 0.2s;">
+                            <div class="text-4xl font-bold gradient-bg bg-clip-text text-transparent counter" data-target="4">0</div>
+                            <div class="text-sm text-gray-400">Years Coding</div>
+                        </div>
+                        <div class="space-y-2 fade-up" style="animation-delay: 0.4s;">
+                            <div class="text-4xl font-bold gradient-bg bg-clip-text text-transparent counter" data-target="20">0</div>
+                            <div class="text-sm text-gray-400">Projects Built</div>
+                        </div>
+                        <div class="space-y-2 fade-up" style="animation-delay: 0.6s;">
+                            <div class="text-4xl font-bold gradient-bg bg-clip-text text-transparent counter" data-target="8">0</div>
+                            <div class="text-sm text-gray-400">Certifications</div>
+                        </div>
+                        <div class="space-y-2 fade-up" style="animation-delay: 0.8s;">
+                            <div class="text-4xl font-bold gradient-bg bg-clip-text text-transparent">7.0</div>
+                            <div class="text-sm text-gray-400">CGPA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-bg bg-clip-text text-transparent">Skills & Technologies</h2>
+            
+            <div class="grid lg:grid-cols-4 gap-8 mb-16">
+                <!-- Programming Languages -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-center">Programming</h3>
+                    <div class="space-y-3">
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">🐍</div>
+                            <div class="text-sm font-medium">Python</div>
+                        </div>
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">☕</div>
+                            <div class="text-sm font-medium">Java</div>
+                        </div>
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">🔧</div>
+                            <div class="text-sm font-medium">C/C++</div>
+                        </div>
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">📊</div>
+                            <div class="text-sm font-medium">DSA</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Web Frontend -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-center">Frontend</h3>
+                    <div class="space-y-3">
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">🌐</div>
+                            <div class="text-sm font-medium">HTML/CSS</div>
+                        </div>
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">📜</div>
+                            <div class="text-sm font-medium">JavaScript</div>
+                        </div>
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">⚛️</div>
+                            <div class="text-sm font-medium">React</div>
+                        </div>
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">🅰️</div>
+                            <div class="text-sm font-medium">AngularJS</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Backend & Database -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-center">Backend</h3>
+                    <div class="space-y-3">
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">🟢</div>
+                            <div class="text-sm font-medium">Node.js</div>
+                        </div>
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">🐘</div>
+                            <div class="text-sm font-medium">PHP</div>
+                        </div>
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">🗄️</div>
+                            <div class="text-sm font-medium">MongoDB</div>
+                        </div>
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">🐬</div>
+                            <div class="text-sm font-medium">MySQL</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI & Tools -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-center">AI & Tools</h3>
+                    <div class="space-y-3">
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">🤖</div>
+                            <div class="text-sm font-medium">AI/ML</div>
+                        </div>
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">📈</div>
+                            <div class="text-sm font-medium">Pandas</div>
+                        </div>
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">🎨</div>
+                            <div class="text-sm font-medium">Tailwind</div>
+                        </div>
+                        <div class="skill-badge glass-card p-3 rounded-xl text-center">
+                            <div class="text-2xl mb-1">🐙</div>
+                            <div class="text-sm font-medium">Git</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Proficiency Charts -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <h4 class="text-lg font-semibold mb-4">Frontend Development</h4>
+                    <div class="relative w-24 h-24 mx-auto">
+                        <svg class="radial-progress w-24 h-24" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="35" stroke="#374151" stroke-width="6" fill="none"/>
+                            <circle cx="50" cy="50" r="35" stroke="url(#gradient1)" stroke-width="6" fill="none" 
+                                    stroke-dasharray="219.8" stroke-dashoffset="43.96" class="progress-circle" id="frontend-circle"/>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-lg font-bold">80%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <h4 class="text-lg font-semibold mb-4">Backend Development</h4>
+                    <div class="relative w-24 h-24 mx-auto">
+                        <svg class="radial-progress w-24 h-24" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="35" stroke="#374151" stroke-width="6" fill="none"/>
+                            <circle cx="50" cy="50" r="35" stroke="url(#gradient2)" stroke-width="6" fill="none" 
+                                    stroke-dasharray="219.8" stroke-dashoffset="65.94" class="progress-circle" id="backend-circle"/>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-lg font-bold">70%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <h4 class="text-lg font-semibold mb-4">AI/ML & Data</h4>
+                    <div class="relative w-24 h-24 mx-auto">
+                        <svg class="radial-progress w-24 h-24" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="35" stroke="#374151" stroke-width="6" fill="none"/>
+                            <circle cx="50" cy="50" r="35" stroke="url(#gradient3)" stroke-width="6" fill="none" 
+                                    stroke-dasharray="219.8" stroke-dashoffset="87.92" class="progress-circle" id="ai-circle"/>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-lg font-bold">60%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SVG Gradients -->
+        <svg width="0" height="0">
+            <defs>
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#00d1bf;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#ff6a3d;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#ff6a3d;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#6a3bff;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#6a3bff;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#00d1bf;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-bg bg-clip-text text-transparent">Featured Projects</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AI Real-Time Stock Advisor -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden cursor-pointer neon-glow" onclick="openModal('stock-modal')">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-600 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-6xl">📈</div>
+                        <div class="absolute top-4 right-4 bg-black/50 px-3 py-1 rounded-full text-sm">AI Tool</div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-xl font-semibold">AI Real-Time Stock Advisor</h3>
+                        <p class="text-gray-400">Intelligent stock analysis platform with real-time data visualization and AI-powered recommendations.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">Pandas</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Matplotlib</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI Resume Analyzer -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden cursor-pointer neon-glow" onclick="openModal('analyzer-modal')">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-6xl">🔍</div>
+                        <div class="absolute top-4 right-4 bg-black/50 px-3 py-1 rounded-full text-sm">NLP</div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-xl font-semibold">AI Resume Analyzer</h3>
+                        <p class="text-gray-400">Advanced NLP-powered resume analysis with GPT-3.5 integration for intelligent feedback.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Python NLP</span>
+                            <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">OpenAI</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Agri Market -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden cursor-pointer neon-glow" onclick="openModal('agri-modal')">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-6xl">🌾</div>
+                        <div class="absolute top-4 right-4 bg-black/50 px-3 py-1 rounded-full text-sm">E-commerce</div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-xl font-semibold">Agri Market Platform</h3>
+                        <p class="text-gray-400">Full-stack agricultural marketplace with real-time order system and responsive design.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">PHP</span>
+                            <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">MySQL</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pizza Delivery Website -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden cursor-pointer neon-glow" onclick="openModal('pizza-modal')">
+                    <div class="h-48 bg-gradient-to-br from-red-500 to-orange-600 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-6xl">🍕</div>
+                        <div class="absolute top-4 right-4 bg-black/50 px-3 py-1 rounded-full text-sm">Web App</div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-xl font-semibold">Pizza Delivery Website</h3>
+                        <p class="text-gray-400">Full-stack pizza ordering platform with real-time tracking and payment integration.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI Resume Builder -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden cursor-pointer neon-glow" onclick="openModal('builder-modal')">
+                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-6xl">📄</div>
+                        <div class="absolute top-4 right-4 bg-black/50 px-3 py-1 rounded-full text-sm">AI Tool</div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-xl font-semibold">AI Resume Builder</h3>
+                        <p class="text-gray-400">Intelligent resume builder with AI-powered content suggestions and multiple templates.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">OpenAI</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Farmers Market Place -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden cursor-pointer neon-glow" onclick="openModal('farmers-modal')">
+                    <div class="h-48 bg-gradient-to-br from-yellow-500 to-green-600 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-6xl">🚜</div>
+                        <div class="absolute top-4 right-4 bg-black/50 px-3 py-1 rounded-full text-sm">Marketplace</div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-xl font-semibold">Farmers Market Place</h3>
+                        <p class="text-gray-400">Digital marketplace connecting farmers directly with consumers for fresh produce.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">PHP</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-bg bg-clip-text text-transparent">Experience & Training</h2>
+            
+            <div class="space-y-8">
+                <div class="timeline-item glass-card p-8 rounded-2xl">
+                    <div class="flex flex-col md:flex-row md:items-center gap-6">
+                        <div class="md:w-1/4">
+                            <div class="text-cyan-400 font-semibold">Apr 2024 - Jun 2024</div>
+                            <div class="text-sm text-gray-400">3 months</div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-semibold mb-2">Agri Market Developer</h3>
+                            <div class="text-gray-300 mb-4">
+                                Developed a comprehensive agricultural marketplace platform with full e-commerce functionality, real-time order management system, and responsive user interface.
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">HTML/CSS/JS</span>
+                                <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">PHP</span>
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">MySQL</span>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item glass-card p-8 rounded-2xl">
+                    <div class="flex flex-col md:flex-row md:items-center gap-6">
+                        <div class="md:w-1/4">
+                            <div class="text-cyan-400 font-semibold">Summer 2024</div>
+                            <div class="text-sm text-gray-400">Training Program</div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-semibold mb-2">Summer Training Internship</h3>
+                            <div class="text-orange-400 mb-2">CSE Patashala</div>
+                            <div class="text-gray-300 mb-4">
+                                Intensive training program focused on C++ Object-Oriented Programming and Data Structures & Algorithms. Gained hands-on experience with advanced programming concepts and problem-solving techniques.
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">C++ OOP</span>
+                                <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">Data Structures</span>
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Algorithms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Timeline -->
+    <section id="education" class="py-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-bg bg-clip-text text-transparent">Education</h2>
+            
+            <div class="relative">
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-500 rounded-full"></div>
+                
+                <div class="space-y-12">
+                    <div class="timeline-item flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="glass-card p-6 rounded-2xl">
+                                <h3 class="text-xl font-semibold mb-2">B.Tech Computer Science & Engineering</h3>
+                                <div class="text-cyan-400 mb-2">Lovely Professional University</div>
+                                <div class="text-gray-400 text-sm mb-2">2023 - 2027 (Expected)</div>
+                                <div class="text-orange-400 font-semibold mb-4">CGPA: 7.0/10</div>
+                                <p class="text-gray-300">Currently in 3rd year, focusing on full-stack development, AI/ML, data structures, and modern web technologies.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 gradient-bg rounded-full pulse-dot"></div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                    
+                    <div class="timeline-item flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 gradient-bg rounded-full pulse-dot"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="glass-card p-6 rounded-2xl">
+                                <h3 class="text-xl font-semibold mb-2">Intermediate (12th Grade)</h3>
+                                <div class="text-cyan-400 mb-2">Sr. Junior College</div>
+                                <div class="text-gray-400 text-sm mb-2">2021 - 2023</div>
+                                <div class="text-orange-400 font-semibold mb-4">Score: 948/1000</div>
+                                <p class="text-gray-300">Completed higher secondary education with focus on mathematics, physics, and computer science fundamentals.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="glass-card p-6 rounded-2xl">
+                                <h3 class="text-xl font-semibold mb-2">Secondary School (10th Grade)</h3>
+                                <div class="text-cyan-400 mb-2">Geethanjali High School</div>
+                                <div class="text-gray-400 text-sm mb-2">2019 - 2021</div>
+                                <div class="text-orange-400 font-semibold mb-4">CGPA: 10/10</div>
+                                <p class="text-gray-300">Achieved perfect CGPA with strong foundation in mathematics and science subjects.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 gradient-bg rounded-full pulse-dot"></div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-bg bg-clip-text text-transparent">Certifications & Achievements</h2>
+            
+            <div class="overflow-hidden">
+                <div class="cert-carousel flex space-x-6 w-max">
+                    <div class="glass-card p-6 rounded-2xl min-w-80 text-center">
+                        <div class="text-4xl mb-4">🏆</div>
+                        <h3 class="text-lg font-semibold mb-2">Oracle Certified</h3>
+                        <p class="text-cyan-400 mb-2">Generative AI & Developer</p>
+                        <p class="text-gray-400 text-sm">Advanced certification in AI development and generative technologies</p>
+                    </div>
+                    
+                    <div class="glass-card p-6 rounded-2xl min-w-80 text-center">
+                        <div class="text-4xl mb-4">💼</div>
+                        <h3 class="text-lg font-semibold mb-2">Infosys Certification</h3>
+                        <p class="text-cyan-400 mb-2">Professional Development</p>
+                        <p class="text-gray-400 text-sm">Industry-recognized certification in software development practices</p>
+                    </div>
+                    
+                    <div class="glass-card p-6 rounded-2xl min-w-80 text-center">
+                        <div class="text-4xl mb-4">🧮</div>
+                        <h3 class="text-lg font-semibold mb-2">Computational Theory</h3>
+                        <p class="text-cyan-400 mb-2">Language Principles & Finite Automata</p>
+                        <p class="text-gray-400 text-sm">Advanced theoretical computer science concepts</p>
+                    </div>
+                    
+                    <div class="glass-card p-6 rounded-2xl min-w-80 text-center">
+                        <div class="text-4xl mb-4">🎓</div>
+                        <h3 class="text-lg font-semibold mb-2">Coursera</h3>
+                        <p class="text-cyan-400 mb-2">Computer Organization & Design</p>
+                        <p class="text-gray-400 text-sm">Hardware-software interface and system design</p>
+                    </div>
+                    
+                    <div class="glass-card p-6 rounded-2xl min-w-80 text-center">
+                        <div class="text-4xl mb-4">🌐</div>
+                        <h3 class="text-lg font-semibold mb-2">NPTEL</h3>
+                        <p class="text-cyan-400 mb-2">Advanced Computer Networks</p>
+                        <p class="text-gray-400 text-sm">Network protocols, security, and distributed systems</p>
+                    </div>
+                    
+                    <div class="glass-card p-6 rounded-2xl min-w-80 text-center">
+                        <div class="text-4xl mb-4">💻</div>
+                        <h3 class="text-lg font-semibold mb-2">Neocolab</h3>
+                        <p class="text-cyan-400 mb-2">DSA with C++</p>
+                        <p class="text-gray-400 text-sm">Data structures and algorithms implementation</p>
+                    </div>
+                    
+                    <div class="glass-card p-6 rounded-2xl min-w-80 text-center">
+                        <div class="text-4xl mb-4">🎮</div>
+                        <h3 class="text-lg font-semibold mb-2">Google Arcade</h3>
+                        <p class="text-cyan-400 mb-2">In Progress</p>
+                        <p class="text-gray-400 text-sm">Cloud computing and modern development practices</p>
+                    </div>
+                    
+                    <!-- Duplicate for seamless loop -->
+                    <div class="glass-card p-6 rounded-2xl min-w-80 text-center">
+                        <div class="text-4xl mb-4">🏆</div>
+                        <h3 class="text-lg font-semibold mb-2">Oracle Certified</h3>
+                        <p class="text-cyan-400 mb-2">Generative AI & Developer</p>
+                        <p class="text-gray-400 text-sm">Advanced certification in AI development and generative technologies</p>
+                    </div>
+                    
+                    <div class="glass-card p-6 rounded-2xl min-w-80 text-center">
+                        <div class="text-4xl mb-4">💼</div>
+                        <h3 class="text-lg font-semibold mb-2">Infosys Certification</h3>
+                        <p class="text-cyan-400 mb-2">Professional Development</p>
+                        <p class="text-gray-400 text-sm">Industry-recognized certification in software development practices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-bg bg-clip-text text-transparent">Let's Connect</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4">Get In Touch</h3>
+                        <p class="text-gray-300 mb-8">
+                            I'm always excited to discuss new opportunities, collaborate on innovative projects, or just chat about technology and AI. Feel free to reach out!
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center">
+                                <span class="text-xl">📧</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Email</div>
+                                <div class="text-gray-400 flex items-center gap-2">
+                                    <a href="mailto:venkatasaigunda82@gmail.com" class="hover:text-cyan-400">venkatasaigunda82@gmail.com</a>
+                                    <button onclick="copyEmail()" class="text-cyan-400 hover:text-cyan-300 text-sm focus:outline-none focus:text-cyan-300">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center">
+                                <span class="text-xl">📱</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Phone</div>
+                                <a href="tel:+919963039884" class="text-gray-400 hover:text-cyan-400">+91-9963039884</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center">
+                                <span class="text-xl">💼</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">LinkedIn</div>
+                                <a href="https://www.linkedin.com/in/gunda-venkatasai" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">
+                                    linkedin.com/in/gunda-venkatasai
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center">
+                                <span class="text-xl">🐙</span>
+                            </div>
+                            <div>
+                                <div class="font-semibold">GitHub</div>
+                                <a href="https://github.com/Gundavenkatasai" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300">
+                                    github.com/Gundavenkatasai
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="glass-card p-8 rounded-2xl space-y-6" id="contact-form">
+                    <div>
+                        <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-xl focus:border-cyan-400 focus:outline-none transition-colors" placeholder="Your name">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-xl focus:border-cyan-400 focus:outline-none transition-colors" placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                        <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-xl focus:border-cyan-400 focus:outline-none transition-colors" placeholder="Project collaboration">
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                        <textarea id="message" name="message" required rows="5" class="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-xl focus:border-cyan-400 focus:outline-none transition-colors resize-none" placeholder="Tell me about your project or idea..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full py-4 gradient-bg rounded-xl font-semibold hover:scale-105 transition-transform neon-glow focus:outline-none focus:ring-2 focus:ring-cyan-400">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="gradient-bg bg-clip-text text-transparent text-2xl font-bold mb-4">Gunda Venkatasai</div>
+            <p class="text-gray-400 mb-6">Crafting the future with code, one project at a time.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.linkedin.com/in/gunda-venkatasai" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition-colors">LinkedIn</a>
+                <a href="https://github.com/Gundavenkatasai" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition-colors">GitHub</a>
+                <a href="mailto:venkatasaigunda82@gmail.com" class="text-gray-400 hover:text-cyan-400 transition-colors">Email</a>
+                <a href="tel:+919963039884" class="text-gray-400 hover:text-cyan-400 transition-colors">Phone</a>
+            </div>
+            <div class="mt-8 text-gray-500 text-sm">
+                © 2024 Gunda Venkatasai. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modals -->
+    <div id="stock-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4" role="dialog" aria-labelledby="stock-title" aria-hidden="true">
+        <div class="glass-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="stock-title" class="text-2xl font-bold">AI Real-Time Stock Advisor</h3>
+                    <button onclick="closeModal('stock-modal')" class="text-gray-400 hover:text-white text-2xl focus:outline-none focus:text-white" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="space-y-4">
+                    <div class="h-64 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-8xl">📈</div>
+                    <p class="text-gray-300">An intelligent stock analysis platform that provides real-time market data visualization, trend analysis, and AI-powered investment recommendations using advanced data science techniques.</p>
+                    <div class="space-y-2">
+                        <h4 class="font-semibold">Key Features:</h4>
+                        <ul class="text-gray-300 space-y-1 ml-4">
+                            <li>• Real-time stock data fetching and analysis</li>
+                            <li>• Interactive data visualizations with Matplotlib</li>
+                            <li>• AI-powered trend prediction algorithms</li>
+                            <li>• Portfolio optimization recommendations</li>
+                            <li>• Risk assessment and market sentiment analysis</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">Pandas</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">NumPy</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Matplotlib</span>
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">HTML/CSS/JS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="analyzer-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4" role="dialog" aria-labelledby="analyzer-title" aria-hidden="true">
+        <div class="glass-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="analyzer-title" class="text-2xl font-bold">AI Resume Analyzer</h3>
+                    <button onclick="closeModal('analyzer-modal')" class="text-gray-400 hover:text-white text-2xl focus:outline-none focus:text-white" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="space-y-4">
+                    <div class="h-64 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-8xl">🔍</div>
+                    <p class="text-gray-300">Advanced NLP-powered resume analysis tool that leverages OpenAI's GPT-3.5 to provide intelligent feedback, keyword optimization, and improvement suggestions for job seekers.</p>
+                    <div class="space-y-2">
+                        <h4 class="font-semibold">Key Features:</h4>
+                        <ul class="text-gray-300 space-y-1 ml-4">
+                            <li>• Natural Language Processing for content analysis</li>
+                            <li>• GPT-3.5 integration for intelligent feedback</li>
+                            <li>• ATS compatibility scoring</li>
+                            <li>• Keyword optimization suggestions</li>
+                            <li>• Interactive web interface with Streamlit/Flask</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Python NLP</span>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">OpenAI GPT-3.5</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Streamlit</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Flask</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="agri-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4" role="dialog" aria-labelledby="agri-title" aria-hidden="true">
+        <div class="glass-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="agri-title" class="text-2xl font-bold">Agri Market Platform</h3>
+                    <button onclick="closeModal('agri-modal')" class="text-gray-400 hover:text-white text-2xl focus:outline-none focus:text-white" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="space-y-4">
+                    <div class="h-64 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center text-8xl">🌾</div>
+                    <p class="text-gray-300">A comprehensive agricultural marketplace platform that connects farmers directly with consumers, featuring full e-commerce functionality, real-time order management, and responsive design built with modern web technologies.</p>
+                    <div class="space-y-2">
+                        <h4 class="font-semibold">Key Features:</h4>
+                        <ul class="text-gray-300 space-y-1 ml-4">
+                            <li>• Full e-commerce functionality with shopping cart</li>
+                            <li>• Real-time order management system</li>
+                            <li>• Responsive design with Tailwind CSS</li>
+                            <li>• AJAX/JSON for dynamic content loading</li>
+                            <li>• Secure payment processing integration</li>
+                            <li>• Farmer and consumer dashboards</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">HTML/CSS/JS</span>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">PHP</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">MySQL</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Tailwind CSS</span>
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">AJAX/JSON</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pizza-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4" role="dialog" aria-labelledby="pizza-title" aria-hidden="true">
+        <div class="glass-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="pizza-title" class="text-2xl font-bold">Pizza Delivery Website</h3>
+                    <button onclick="closeModal('pizza-modal')" class="text-gray-400 hover:text-white text-2xl focus:outline-none focus:text-white" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="space-y-4">
+                    <div class="h-64 bg-gradient-to-br from-red-500 to-orange-600 rounded-xl flex items-center justify-center text-8xl">🍕</div>
+                    <p class="text-gray-300">A comprehensive pizza delivery platform featuring real-time order tracking, secure payment processing, and an intuitive admin dashboard for restaurant management.</p>
+                    <div class="space-y-2">
+                        <h4 class="font-semibold">Key Features:</h4>
+                        <ul class="text-gray-300 space-y-1 ml-4">
+                            <li>• User authentication and profiles</li>
+                            <li>• Real-time order tracking</li>
+                            <li>• Payment gateway integration</li>
+                            <li>• Admin dashboard for order management</li>
+                            <li>• Responsive design for all devices</li>
+                            <li>• Menu customization and inventory management</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">React</span>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">MongoDB</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Express.js</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="builder-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4" role="dialog" aria-labelledby="builder-title" aria-hidden="true">
+        <div class="glass-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="builder-title" class="text-2xl font-bold">AI Resume Builder</h3>
+                    <button onclick="closeModal('builder-modal')" class="text-gray-400 hover:text-white text-2xl focus:outline-none focus:text-white" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="space-y-4">
+                    <div class="h-64 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center text-8xl">📄</div>
+                    <p class="text-gray-300">An intelligent resume builder that uses AI to suggest content improvements, optimize keywords, and provide multiple professional templates for different industries.</p>
+                    <div class="space-y-2">
+                        <h4 class="font-semibold">Key Features:</h4>
+                        <ul class="text-gray-300 space-y-1 ml-4">
+                            <li>• AI-powered content suggestions</li>
+                            <li>• Multiple professional templates</li>
+                            <li>• ATS optimization</li>
+                            <li>• Real-time preview</li>
+                            <li>• PDF export functionality</li>
+                            <li>• Industry-specific customization</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">React</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">OpenAI API</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Flask</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="farmers-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4" role="dialog" aria-labelledby="farmers-title" aria-hidden="true">
+        <div class="glass-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="farmers-title" class="text-2xl font-bold">Farmers Market Place</h3>
+                    <button onclick="closeModal('farmers-modal')" class="text-gray-400 hover:text-white text-2xl focus:outline-none focus:text-white" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="space-y-4">
+                    <div class="h-64 bg-gradient-to-br from-yellow-500 to-green-600 rounded-xl flex items-center justify-center text-8xl">🚜</div>
+                    <p class="text-gray-300">A digital marketplace that connects farmers directly with consumers, eliminating middlemen and ensuring fresh produce reaches customers at fair prices.</p>
+                    <div class="space-y-2">
+                        <h4 class="font-semibold">Key Features:</h4>
+                        <ul class="text-gray-300 space-y-1 ml-4">
+                            <li>• Farmer and consumer registration</li>
+                            <li>• Product catalog with images</li>
+                            <li>• Location-based search</li>
+                            <li>• Order management system</li>
+                            <li>• Rating and review system</li>
+                            <li>• Direct messaging between farmers and consumers</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">JavaScript</span>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">PHP</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">MySQL</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Copy email function with feedback
+        function copyEmail() {
+            const email = 'venkatasaigunda82@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                // Create temporary feedback element
+                const feedback = document.createElement('div');
+                feedback.textContent = 'Email copied!';
+                feedback.className = 'fixed top-20 right-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50 transition-opacity';
+                document.body.appendChild(feedback);
+                
+                setTimeout(() => {
+                    feedback.style.opacity = '0';
+                    setTimeout(() => document.body.removeChild(feedback), 300);
+                }, 2000);
+            }).catch(() => {
+                alert('Failed to copy email. Please copy manually: ' + email);
+            });
+        }
+
+        // Download resume
+        function downloadResume() {
+            const resumeContent = `
+GUNDA VENKATASAI
+Full Stack Web Developer
+
+Contact Information:
+Email: venkatasaigunda82@gmail.com
+Phone: +91-9963039884
+LinkedIn: https://www.linkedin.com/in/gunda-venkatasai
+GitHub: https://github.com/Gundavenkatasai
+
+Education:
+B.Tech Computer Science & Engineering
+Lovely Professional University (2023-2027)
+CGPA: 7.0/10
+
+Skills:
+- Programming: Python, Java, C, C++, DSA
+- Web Technologies: HTML, CSS, JavaScript, React, AngularJS, Node.js
+- Databases: MongoDB, MySQL, DBMS
+- AI/ML: Python NLP, OpenAI GPT-3.5, Pandas, NumPy, Matplotlib
+- Tools: Git, Tailwind CSS, PHP
+
+Certifications:
+- Oracle Certified Generative AI & Developer
+- Infosys Certification
+- Computational Theory: Language Principles & Finite Automata
+- Coursera: Computer Organization & Design
+- NPTEL: Advanced Computer Networks
+- Neocolab: DSA with C++
+- Google Arcade (In Progress)
+
+Projects:
+1. AI Real-Time Stock Advisor - Python, Pandas, NumPy, Matplotlib
+2. AI Resume Analyzer - Python NLP, OpenAI GPT-3.5, Streamlit/Flask
+3. Agri Market Platform - HTML/CSS/JS, PHP, MySQL, Tailwind CSS
+4. Pizza Delivery Website - React, Node.js, MongoDB
+5. AI Resume Builder - Python, React, OpenAI API
+
+Experience:
+- Agri Market Developer (Apr-Jun 2024)
+- Summer Training Internship - CSE Patashala (C++ OOP & DSA)
+
+This is a sample resume. Please replace with your actual formatted resume.
+            `;
+            
+            const link = document.createElement('a');
+            link.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(resumeContent);
+            link.download = 'Gunda_Venkatasai_Resume.txt';
+            link.click();
+        }
+
+        // Modal functions
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const increment = target / 50;
+                let current = 0;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.ceil(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+
+        // Timeline animation
+        function animateTimeline() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, index * 300);
+            });
+        }
+
+        // Fade up animation
+        function animateFadeUp() {
+            const fadeUpElements = document.querySelectorAll('.fade-up');
+            fadeUpElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('visible');
+                }, index * 200);
+            });
+        }
+
+        // Skill badges animation
+        function animateSkillBadges() {
+            const skillBadges = document.querySelectorAll('.skill-badge');
+            skillBadges.forEach((badge, index) => {
+                setTimeout(() => {
+                    badge.style.opacity = '1';
+                    badge.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        }
+
+        // Contact form handling
+        function initContactForm() {
+            const form = document.getElementById('contact-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Create success feedback
+                const feedback = document.createElement('div');
+                feedback.textContent = 'Thank you for your message! I\'ll get back to you soon.';
+                feedback.className = 'fixed top-20 right-4 bg-green-500 text-white px-6 py-3 rounded-lg z-50 max-w-sm';
+                document.body.appendChild(feedback);
+                
+                setTimeout(() => {
+                    feedback.style.opacity = '0';
+                    setTimeout(() => document.body.removeChild(feedback), 300);
+                }, 3000);
+                
+                form.reset();
+            });
+        }
+
+        // Intersection Observer for animations
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.id === 'about') {
+                            animateCounters();
+                            animateFadeUp();
+                        } else if (entry.target.id === 'skills') {
+                            animateSkillBadges();
+                        } else if (entry.target.id === 'education') {
+                            animateTimeline();
+                        } else if (entry.target.id === 'experience') {
+                            animateTimeline();
+                        }
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            observer.observe(document.getElementById('about'));
+            observer.observe(document.getElementById('skills'));
+            observer.observe(document.getElementById('education'));
+            observer.observe(document.getElementById('experience'));
+        }
+
+        // Initialize skill badges with initial hidden state
+        function initSkillBadges() {
+            const skillBadges = document.querySelectorAll('.skill-badge');
+            skillBadges.forEach(badge => {
+                badge.style.opacity = '0';
+                badge.style.transform = 'translateY(20px)';
+                badge.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            initContactForm();
+            initScrollAnimations();
+            initSkillBadges();
+        });
+
+        // Close modals when clicking outside or pressing Escape
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('fixed') && e.target.classList.contains('inset-0')) {
+                const modals = ['stock-modal', 'analyzer-modal', 'agri-modal', 'pizza-modal', 'builder-modal', 'farmers-modal'];
+                modals.forEach(modalId => {
+                    if (!document.getElementById(modalId).classList.contains('hidden')) {
+                        closeModal(modalId);
+                    }
+                });
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const modals = ['stock-modal', 'analyzer-modal', 'agri-modal', 'pizza-modal', 'builder-modal', 'farmers-modal'];
+                modals.forEach(modalId => {
+                    if (!document.getElementById(modalId).classList.contains('hidden')) {
+                        closeModal(modalId);
+                    }
+                });
+            }
+        });
+
+        // Parallax effect for morphing blobs
+        document.addEventListener('mousemove', (e) => {
+            const blobs = document.querySelectorAll('.morphing-blob');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            blobs.forEach((blob, index) => {
+                const speed = (index + 1) * 0.02;
+                const x = (mouseX - 0.5) * speed * 100;
+                const y = (mouseY - 0.5) * speed * 100;
+                blob.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+
+        // Smooth navigation
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97e6fd9815d98eee',t:'MTc1Nzc1OTY1MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
